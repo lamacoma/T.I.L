@@ -7,8 +7,8 @@ run 이라는 메소드에 쓰레드가 수행될 코드를 작성한다.
 또는 객체에 Thread 를 상속하여 내부에 run 메소드를 만드는 방법도 가능하다.
 
 이는 Runnable 메소드가 run이라는 메소드만 가지고 있는 함수형 객체이기 때문에 가능하다.
-
-~~~java
+---
+'''java
 public class ex1 {
 
 	public static void main(String[] args) {
@@ -29,11 +29,11 @@ public class ex1 {
 	}
 
 }
-~~~
-
+'''
+---
 만들어진 스레드 객체의 start 메소드를 실행시키면 그 시점부터 Runnable의 run을 스레드에 담아 작업을 처리하기 시작한다.
-
-~~~java
+---
+'''java
 public class ex1 {
 
 	public static void main(String[] args) {
@@ -66,8 +66,8 @@ class t1 implements Runnable {
 		}
 	}
 }
-~~~
-
+'''
+---
 예상했던거와는 다르게 숫자가 일렬로 나오지는 않는다. 나중에 이를 쓰레드 동기화를 통해서 처리할 수 있다.
 
 쓰레드에는 이름을 붙이는것도 가능하다.
@@ -79,8 +79,8 @@ Thread th=Thread.currentThread();
 th.getName();
 
 Thread의 정적 메소드인 currentThread()를 통해 현재 실행중인 쓰레드를 얻어내는것이 가능하다.
-
-~~~java
+---
+'''java
 public class ex1 {
 
 	public static void main(String[] args) {
@@ -116,4 +116,4 @@ class tb extends Thread{
 		}
 	}
 }
-~~~
+'''
